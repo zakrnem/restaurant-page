@@ -1,0 +1,13 @@
+header {
+    display: flex;
+    background-color: rgb(162, 162, 162);
+}
+
+main > .image {
+    height: 50vh;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
