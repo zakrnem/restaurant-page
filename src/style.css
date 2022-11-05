@@ -121,6 +121,10 @@ main {
     color: white;
 }
 
+.info-icon {
+    height: 1.2rem;
+}
+
 .github {
     height: 1.5rem;
     width:auto;
