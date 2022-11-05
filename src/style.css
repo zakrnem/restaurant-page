@@ -3,9 +3,16 @@
     src: url(Bungee-Regular.ttf);
 }
 
+:root {
+    --red: #ff0000;
+    --darkred: #920000;
+  }
+
 * {
     margin: 0;
     padding: 0;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 body {
@@ -35,20 +42,35 @@ header > .logo {
     flex: auto;
     font-size: 3.5rem;
     font-family: title;
-    text-shadow: 2px 2px #ff0000;
+    text-shadow: 2px 2px var(--red);
 }
 
 .nav {
     display: flex;
     gap: 3rem;
-    padding: 1rem;
-    font-size: 1.4rem;
-    font-weight: bolder;
-    text-shadow: 2px 2px #ff0000;
+    padding: 0 1rem;
+
 }
 
-.nav > *:hover {
-    color: #e39c9c;
+.nav-button {
+    padding: 0.5rem 2rem;
+    border-radius: 7px;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    font-size: 1.6rem;
+    text-shadow: -1px -1px 0 var(--red), 1px -1px 0 var(--red), -1px 1px 0 var(--red), 1px 1px 0 var(--red);
+    font-family: title;
+}
+
+.nav-button:hover {
+    border: 3px solid var(--red);
+    text-shadow: -2px -2px 0 var(--red), 2px -2px 0 var(--red), -2px 2px 0 var(--red), 2px 2px 0 var(--red);
+}
+
+.nav-button:active {
+    border: 3px solid var(--darkred);
+    text-shadow: -2px -2px 0 var(--darkred), 2px -2px 0 var(--darkred), -2px 2px 0 var(--darkred), 2px 2px 0 var(--darkred);
 }
 
 main {
