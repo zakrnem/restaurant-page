@@ -3,6 +3,16 @@
     src: url(Bungee-Regular.ttf);
 }
 
+@font-face {
+    font-family: secondary-title;
+    src: url(Galindo-Regular.ttf);
+}
+
+@font-face {
+    font-family: para;
+    src: url(Exo2-VariableFont_wght.ttf);
+}
+
 :root {
     --red: #ff0000;
     --darkred: #920000;
@@ -19,7 +29,10 @@ body {
     display: flex;
     flex-direction: column;
     background-image: url('/src/image.webp');
+    background-size: cover;
     height: 100vh;
+    font-family: para;
+    font-size: 1.1rem;
 }
 
 header {
@@ -52,7 +65,7 @@ header > .logo {
 
 }
 
-.nav-button {
+button {
     padding: 0.5rem 2rem;
     border-radius: 7px;
     background-color: black;
@@ -63,12 +76,12 @@ header > .logo {
     font-family: title;
 }
 
-.nav-button:hover {
+button:hover {
     border: 3px solid var(--red);
     text-shadow: -2px -2px 0 var(--red), 2px -2px 0 var(--red), -2px 2px 0 var(--red), 2px 2px 0 var(--red);
 }
 
-.nav-button:active {
+button:active {
     border: 3px solid var(--darkred);
     text-shadow: -2px -2px 0 var(--darkred), 2px -2px 0 var(--darkred), -2px 2px 0 var(--darkred), 2px 2px 0 var(--darkred);
 }
@@ -76,28 +89,36 @@ header > .logo {
 main {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
     height: 100%;
+    align-items: center;
     justify-content: center;
-    background-color: rgba(255,255,255,0.1);
 }
 
-/* body:before {
-    content: ' ';
-    background-color: white;
-    opacity: 0.5;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-} */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 3rem;
+    background-color: rgba(0,0,0,0.9);
+    border-radius: 30px;
+    color: white;
+    border: 5px solid white;
+    text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}
+
+.container > h3 {
+    font-family: secondary-title;
+    font-size: 2rem;
+}
 
 .info {
     display: flex;
     flex-direction: column;
-    border: solid 1px #6a696a;
     border-radius: 5px;
     padding: 1rem;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
 }
 
 .github {
