@@ -1,0 +1,18 @@
+/* import {head} from './header.js'
+head() */
+
+/* 
+
+home.addEventListener('click', () => {
+    console.log('Home')
+});
+
+let menu = document.getElementById('menu')
+menu.addEventListener('click', () => {
+    console.log('Menu')
+})
+
+let contact = document.getElementById('contact')
+contact.addEventListener('click', () => {
+    console.log('Contact')
+}) */
