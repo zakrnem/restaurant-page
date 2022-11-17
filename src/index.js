@@ -1,7 +1,8 @@
 import './style.css';
 console.log('Testing')
 
-let home = document.querySelector('#home')
+import {head} from './header.js'
+head()
 
-console.log(home)
-
+import {listener} from './header.js'
+listener()
