@@ -3,6 +3,5 @@ console.log('Testing')
 
 let home = document.querySelector('#home')
 
-window.onload=function(){
-    console.log(home)
-}
+console.log(home)
+
