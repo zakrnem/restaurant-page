@@ -13,17 +13,14 @@ export function head() {
     nav.className = 'nav'
 
     let homeButton = document.createElement('button')
-    homeButton.className = 'nav-button'
     homeButton.id = 'home'
     homeButton.textContent = 'Home'
 
     let menuButton = document.createElement('button')
-    menuButton.className = 'nav-button'
     menuButton.id = 'menu'
     menuButton.textContent = 'Menu'
 
     let contactButton = document.createElement('button')
-    contactButton.className = 'nav-button'
     contactButton.id = 'contact'
     contactButton.textContent = 'Contact Us'
     

@@ -6,3 +6,9 @@ head()
 
 import {listener} from './header.js'
 listener()
+
+import {body} from './home.js'
+body()
+
+import {footer} from './footer.js'
+footer()
