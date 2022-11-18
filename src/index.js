@@ -13,5 +13,9 @@ body()
 import {orderListener} from './home.js'
 orderListener() */
 
+import {body} from './menu.js'
+body()
+
 import {footer} from './footer.js'
 footer()
+
