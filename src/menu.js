@@ -62,26 +62,3 @@ export function orderListener() {
         console.log('Order')
     })
 }
-
-{/* <div class="menu">
-        <div class="item1">
-            <img src="/src/burrito-svgrepo-com.svg" class="plate-image">
-            <div class="plate-name">Shawarma</div>
-            <div class="plate-price">Price: 5.15$</div>
-        </div>
-        <div class="item2">
-            <img src="/src/falafel-svgrepo-com.svg" class="plate-image">
-            <div class="plate-name">Falafel</div>
-            <div class="plate-price">Price: 3.21$</div>
-        </div>
-        <div class="item3">
-            <img src="/src/hookah-svgrepo-com.svg" class="plate-image">
-            <div class="plate-name">Hookah</div>
-            <div class="plate-price">Price: 1.82$</div>
-        </div>
-        <div class="item4">
-            <img src="/src/lamb-svgrepo-com.svg" class="plate-image">
-            <div class="plate-name">Lamb</div>
-            <div class="plate-price">Price: 4.50$</div>
-        </div>
-    </div> */}

@@ -7,11 +7,11 @@ head()
 import {listener} from './header.js'
 listener()
 
-import {body} from './home.js'
+/* import {body} from './home.js'
 body()
 
 import {orderListener} from './home.js'
-orderListener()
+orderListener() */
 
 import {footer} from './footer.js'
 footer()

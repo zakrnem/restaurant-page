@@ -105,7 +105,8 @@ main {
 }
 
 .container,
-main {
+main,
+.menu-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,4 +161,16 @@ footer {
     justify-content: center;
     padding: 0.4rem 0;
     gap: 0.5rem;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+.plate-image {
+    height: 4rem;
 }
