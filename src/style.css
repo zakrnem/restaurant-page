@@ -26,13 +26,16 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     background-image: url('/src/image.webp');
     background-size: cover;
-    height: 100vh;
     font-family: para;
     font-size: 1.1rem;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 header {
