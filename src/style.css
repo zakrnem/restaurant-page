@@ -40,9 +40,9 @@ body {
 
 header {
     display: flex;
+    align-items: center;
     background-color: black;
     color: white;
-    align-items: center;
     padding: 1rem;
     gap: 1rem;
     align-self: stretch;
@@ -90,24 +90,25 @@ button:active {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
     justify-content: center;
+    height: 100%;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.container,
+.menu {
     gap: 1rem;
     padding: 1.5rem 3.5rem;
     background-color: rgba(0,0,0,0.9);
     border-radius: 30px;
     color: white;
     border: 5px solid white;
-    text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}
+
+.container,
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container > h3 {
