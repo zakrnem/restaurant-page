@@ -1,3 +1,6 @@
+import { menuBody } from './menu.js'
+import { plateListener } from './menu.js';
+
 export function head() {
     let header = document.createElement('header')
 
@@ -36,7 +39,6 @@ export function head() {
     return content.appendChild(header)
 }
 
-
 export function listener() {
     let home = document.querySelector('#home')
     home.addEventListener('click', () => {
@@ -46,6 +48,8 @@ export function listener() {
     let menu = document.getElementById('menu')
     menu.addEventListener('click', () => {
         console.log('Menu')
+        menuBody()
+        plateListener()
     })
 
     let contact = document.getElementById('contact')

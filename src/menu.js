@@ -1,4 +1,4 @@
-export function body() {
+export function menuBody() {
     let main = document.createElement('main')
     
     let container = document.createElement('div')
@@ -6,12 +6,12 @@ export function body() {
 
     let item1 = document.createElement('div')
     item1.className = 'menu-item'
+    item1.id = 'shawarma'
     container.appendChild(item1)
 
         let plateImage1 = document.createElement('img')
         plateImage1.className = 'plate-image'
         plateImage1.src = '/src/burrito-svgrepo-com.svg'
-        plateImage1.id = 'shawarma'
         item1.appendChild(plateImage1)
 
         let plateName1 = document.createElement('div')
@@ -26,12 +26,12 @@ export function body() {
 
     let item2 = document.createElement('div')
     item2.className = 'menu-item'
+    item2.id = 'falafel'
     container.appendChild(item2)
 
         let plateImage2 = document.createElement('img')
         plateImage2.className = 'plate-image'
         plateImage2.src = '/src/falafel-svgrepo-com.svg'
-        plateImage2.id = 'falafel'
         item2.appendChild(plateImage2)
 
         let plateName2 = document.createElement('div')
@@ -46,12 +46,12 @@ export function body() {
         
         let item3 = document.createElement('div')
         item3.className = 'menu-item'
+        item3.id = 'hookah'
         container.appendChild(item3)
     
             let plateImage3 = document.createElement('img')
             plateImage3.className = 'plate-image'
             plateImage3.src = '/src/hookah-svgrepo-com.svg'
-            plateImage3.id = 'hookah'
             item3.appendChild(plateImage3)
     
             let plateName3 = document.createElement('div')
@@ -66,12 +66,12 @@ export function body() {
 
         let item4 = document.createElement('div')
         item4.className = 'menu-item'
+        item4.id = 'lamb'
         container.appendChild(item4)
     
             let plateImage4 = document.createElement('img')
             plateImage4.className = 'plate-image'
             plateImage4.src = '/src/lamb-svgrepo-com.svg'
-            plateImage4.id = 'lamb'
             item4.appendChild(plateImage4)
     
             let plateName4 = document.createElement('div')
