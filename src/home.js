@@ -1,4 +1,4 @@
-export function body() {
+export function homeBody() {
     let main = document.createElement('main')
 
     let container = document.createElement('div')

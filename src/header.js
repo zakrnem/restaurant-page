@@ -1,5 +1,7 @@
 import { menuBody } from './menu.js'
 import { plateListener } from './menu.js';
+import {homeBody} from './home.js'
+import {orderListener} from './home.js'
 
 export function head() {
     let header = document.createElement('header')
@@ -43,11 +45,15 @@ export function listener() {
     let home = document.querySelector('#home')
     home.addEventListener('click', () => {
         console.log('Home')
+        clearDOM()
+        homeBody()
+        orderListener()
     })
 
     let menu = document.getElementById('menu')
     menu.addEventListener('click', () => {
         console.log('Menu')
+        clearDOM()
         menuBody()
         plateListener()
     })
@@ -56,4 +62,17 @@ export function listener() {
     contact.addEventListener('click', () => {
         console.log('Contact')
     })
+
+    let clearDOM = function() {
+        let content = document.querySelector('#content')
+        let footer = document.querySelector('footer')
+        content.removeChild(footer)
+
+        let main = document.querySelector('.main')
+        if (main !== null) {
+            content.removeChild(main)
+        }
+    }
 }
+
+/* We need to import the footer */  
