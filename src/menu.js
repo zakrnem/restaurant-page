@@ -11,6 +11,7 @@ export function body() {
         let plateImage1 = document.createElement('img')
         plateImage1.className = 'plate-image'
         plateImage1.src = '/src/burrito-svgrepo-com.svg'
+        plateImage1.id = 'shawarma'
         item1.appendChild(plateImage1)
 
         let plateName1 = document.createElement('div')
@@ -30,6 +31,7 @@ export function body() {
         let plateImage2 = document.createElement('img')
         plateImage2.className = 'plate-image'
         plateImage2.src = '/src/falafel-svgrepo-com.svg'
+        plateImage2.id = 'falafel'
         item2.appendChild(plateImage2)
 
         let plateName2 = document.createElement('div')
@@ -49,6 +51,7 @@ export function body() {
             let plateImage3 = document.createElement('img')
             plateImage3.className = 'plate-image'
             plateImage3.src = '/src/hookah-svgrepo-com.svg'
+            plateImage3.id = 'hookah'
             item3.appendChild(plateImage3)
     
             let plateName3 = document.createElement('div')
@@ -61,26 +64,49 @@ export function body() {
             platePrice3.textContent = 'Price: 1.82$ '
             item3.appendChild(platePrice3)
 
-            let item4 = document.createElement('div')
-            item4.className = 'menu-item'
-            container.appendChild(item4)
-        
-                let plateImage4 = document.createElement('img')
-                plateImage4.className = 'plate-image'
-                plateImage4.src = '/src/lamb-svgrepo-com.svg'
-                item4.appendChild(plateImage4)
-        
-                let plateName4 = document.createElement('div')
-                plateName4.className = 'plate-name'
-                plateName4.textContent = 'Lamb'
-                item4.appendChild(plateName4)
-        
-                let platePrice4 = document.createElement('div')
-                platePrice4.className = 'plate-price'
-                platePrice4.textContent = 'Price: 4.50$ '
-                item4.appendChild(platePrice4)
+        let item4 = document.createElement('div')
+        item4.className = 'menu-item'
+        container.appendChild(item4)
+    
+            let plateImage4 = document.createElement('img')
+            plateImage4.className = 'plate-image'
+            plateImage4.src = '/src/lamb-svgrepo-com.svg'
+            plateImage4.id = 'lamb'
+            item4.appendChild(plateImage4)
+    
+            let plateName4 = document.createElement('div')
+            plateName4.className = 'plate-name'
+            plateName4.textContent = 'Lamb'
+            item4.appendChild(plateName4)
+    
+            let platePrice4 = document.createElement('div')
+            platePrice4.className = 'plate-price'
+            platePrice4.textContent = 'Price: 4.50$ '
+            item4.appendChild(platePrice4)
 
     main.appendChild(container)
     let content = document.querySelector('#content')
     return content.appendChild(main)
+}
+
+export function plateListener() {
+    let shawarma = document.getElementById('shawarma')
+    shawarma.addEventListener('click', () => {
+        console.log('Shawarma')
+    })
+
+    let falafel = document.getElementById('falafel')
+    falafel.addEventListener('click', () => {
+        console.log('Falafel')
+    })
+
+    let hookah = document.getElementById('hookah')
+    hookah.addEventListener('click', () => {
+        console.log('Hookah')
+    })
+
+    let lamb = document.getElementById('lamb')
+    lamb.addEventListener('click', () => {
+        console.log('Lamb')
+    })
 }

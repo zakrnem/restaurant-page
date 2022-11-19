@@ -16,6 +16,9 @@ orderListener() */
 import {body} from './menu.js'
 body()
 
+import { plateListener } from './menu.js';
+plateListener()
+
 import {footer} from './footer.js'
 footer()
 
