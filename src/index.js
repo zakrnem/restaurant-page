@@ -1,23 +1,16 @@
 import './style.css';
-console.log('Testing')
 
 import {head} from './header.js'
 head()
 
-import {listener} from './header.js'
-listener()
+import {headerListener} from './header.js'
+headerListener()
 
-/* import {body} from './home.js'
-body()
+import {homeBody} from './home.js'
+homeBody()
 
 import {orderListener} from './home.js'
-orderListener() */
-
-/* import {body} from './menu.js'
-body()
-
-import { plateListener } from './menu.js';
-plateListener() */
+orderListener()
 
 import {footer} from './footer.js'
 footer()

@@ -2,6 +2,7 @@ import { menuBody } from './menu.js'
 import { plateListener } from './menu.js';
 import {homeBody} from './home.js'
 import {orderListener} from './home.js'
+import { footer } from './footer.js';
 
 export function head() {
     let header = document.createElement('header')
@@ -41,21 +42,21 @@ export function head() {
     return content.appendChild(header)
 }
 
-export function listener() {
+export function headerListener() {
     let home = document.querySelector('#home')
     home.addEventListener('click', () => {
-        console.log('Home')
         clearDOM()
         homeBody()
         orderListener()
+        footer()
     })
 
     let menu = document.getElementById('menu')
     menu.addEventListener('click', () => {
-        console.log('Menu')
         clearDOM()
         menuBody()
         plateListener()
+        footer()
     })
 
     let contact = document.getElementById('contact')
@@ -63,16 +64,14 @@ export function listener() {
         console.log('Contact')
     })
 
-    let clearDOM = function() {
-        let content = document.querySelector('#content')
-        let footer = document.querySelector('footer')
-        content.removeChild(footer)
+    let main = document.querySelector('.main')
 
-        let main = document.querySelector('.main')
-        if (main !== null) {
-            content.removeChild(main)
+    let clearDOM = function() {
+        let content = document.getElementById('content')
+        let childCount = content.childElementCount
+        let i
+        for (i = childCount; i>1; i--) {
+            content.removeChild(content.lastChild)
         }
     }
 }
-
-/* We need to import the footer */  
