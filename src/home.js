@@ -27,7 +27,7 @@ export function homeBody() {
 
             let locationLogo = document.createElement('img')
             locationLogo.className = 'info-icon'
-            locationLogo.src = '/src/location-svg-repo-com.svg'
+            locationLogo.src = './images/location-svg-repo-com.svg'
             location.appendChild(locationLogo)
 
             let locationText = document.createElement('p')
@@ -40,7 +40,7 @@ export function homeBody() {
 
             let hoursLogo = document.createElement('img')
             hoursLogo.className = 'info-icon'
-            hoursLogo.src = '/src/clock-svgrepo-com.svg'
+            hoursLogo.src = './images/clock-svgrepo-com.svg'
             hours.appendChild(hoursLogo)
 
             let days = document.createElement('div')

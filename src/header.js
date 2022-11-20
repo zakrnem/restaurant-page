@@ -9,7 +9,7 @@ export function head() {
 
     let icon = document.createElement('img')
     icon.className = 'icon'
-    icon.src = '/src/icon.svg'
+    icon.src = './images/icon.svg'
 
     let logo = document.createElement('div')
     logo.className = 'logo'
