@@ -2,7 +2,7 @@ import { menuBody } from './menu.js'
 import { plateListener } from './menu.js';
 import {homeBody} from './home.js'
 import {orderListener} from './home.js'
-import { footer } from './footer.js';
+import { clearDOM } from './clearDOM.js';
 
 export function head() {
     let header = document.createElement('header')
@@ -39,7 +39,8 @@ export function head() {
     header.appendChild(nav)
 
     let content = document.querySelector('#content')
-    return content.appendChild(header)
+    content.appendChild(header)
+    headerListener()
 }
 
 export function headerListener() {
@@ -48,7 +49,6 @@ export function headerListener() {
         clearDOM()
         homeBody()
         orderListener()
-        footer()
     })
 
     let menu = document.getElementById('menu')
@@ -56,7 +56,6 @@ export function headerListener() {
         clearDOM()
         menuBody()
         plateListener()
-        footer()
     })
 
     let contact = document.getElementById('contact')
@@ -65,13 +64,4 @@ export function headerListener() {
     })
 
     let main = document.querySelector('.main')
-
-    let clearDOM = function() {
-        let content = document.getElementById('content')
-        let childCount = content.childElementCount
-        let i
-        for (i = childCount; i>1; i--) {
-            content.removeChild(content.lastChild)
-        }
-    }
 }

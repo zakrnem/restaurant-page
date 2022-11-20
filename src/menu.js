@@ -1,3 +1,5 @@
+import { footer } from './footer.js';
+
 export function menuBody() {
     let main = document.createElement('main')
     
@@ -86,7 +88,8 @@ export function menuBody() {
 
     main.appendChild(container)
     let content = document.querySelector('#content')
-    return content.appendChild(main)
+    content.appendChild(main)
+    footer()
 }
 
 export function plateListener() {

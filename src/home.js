@@ -1,3 +1,7 @@
+import { menuBody } from './menu.js'
+import { clearDOM } from './clearDOM.js'
+import { footer } from './footer.js'
+
 export function homeBody() {
     let main = document.createElement('main')
 
@@ -53,12 +57,14 @@ export function homeBody() {
 
     main.appendChild(container)
     let content = document.querySelector('#content')
-    return content.appendChild(main)
+    content.appendChild(main)
+    footer()
 }
 
 export function orderListener() {
     let order = document.querySelector('#order')
     order.addEventListener('click', () => {
-        console.log('Order')
+        clearDOM()
+        menuBody()
     })
 }
