@@ -59,9 +59,10 @@ export function homeBody() {
     let content = document.querySelector('#content')
     content.appendChild(main)
     footer()
+    orderListener()
 }
 
-export function orderListener() {
+function orderListener() {
     let order = document.querySelector('#order')
     order.addEventListener('click', () => {
         clearDOM()

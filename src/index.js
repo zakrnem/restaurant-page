@@ -1,10 +1,8 @@
 import './style.css';
 
-import {head, headerListener} from './header.js'
+import {head} from './header.js'
 head()
-headerListener()
 
-import {homeBody, orderListener} from './home.js'
+import {homeBody} from './home.js'
 homeBody()
-orderListener()
 

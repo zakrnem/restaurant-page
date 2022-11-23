@@ -53,6 +53,7 @@ function plateListener() {
         if (e.target.className === 'menu-item'
         || e.target.parentNode.className === 'menu-item') {
             console.log(e.target.id ? e.target.id : e.target.parentNode.id)
+            //return in the future
         }
     })
 }
