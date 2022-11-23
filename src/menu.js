@@ -113,3 +113,33 @@ export function plateListener() {
         console.log('Lamb')
     })
 }
+
+export function newPlate(imgSrc, name, price) {
+
+    let main = document.querySelector('main')
+    let container = document.querySelector('.menu')
+    let content = document.querySelector('#content')
+
+    let item = document.createElement('div')
+    item.className = 'menu-item'
+    item.id = name
+    container.appendChild(item)
+        let plateImage = document.createElement('img')
+        plateImage.className = 'plate-image'
+        plateImage.src = `./images/${imgSrc}`
+        item.appendChild(plateImage)
+
+        let plateName = document.createElement('div')
+        plateName.className = 'plate-name'
+        plateName.textContent = name
+        item.appendChild(plateName)
+
+        let platePrice = document.createElement('div')
+        platePrice.className = 'plate-price'
+        platePrice.textContent = `Price: ${price}`
+        item.appendChild(platePrice)
+    
+    main.appendChild(container)
+    content.appendChild(main)
+
+}

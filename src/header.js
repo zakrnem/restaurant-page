@@ -3,6 +3,7 @@ import { plateListener } from './menu.js';
 import {homeBody} from './home.js'
 import {orderListener} from './home.js'
 import { clearDOM } from './clearDOM.js';
+import { newPlate } from './menu.js';
 
 export function head() {
     let header = document.createElement('header')
@@ -56,6 +57,7 @@ export function headerListener() {
         clearDOM()
         menuBody()
         plateListener()
+        newPlate('hookah-svgrepo-com.svg','arabe','1$')
     })
 
     let contact = document.getElementById('contact')
