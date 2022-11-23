@@ -22,7 +22,7 @@ function newPlate(imgSrc, name, price) {
 }
 
 //PENDING: Reduce number of steps on this function
-export function menuBody() {
+export function menuDOM() {
     let main = document.createElement('main')
     let container = document.createElement('div')
     container.className = 'menu'
@@ -44,28 +44,16 @@ export function menuBody() {
     main.appendChild(container)
     content.appendChild(main)
     footer()
+    plateListener()
 }
 
-export function plateListener() {
-    let shawarma = document.getElementById('shawarma')
-    shawarma.addEventListener('click', () => {
-        console.log('Shawarma')
+function plateListener() {
+    let menu = document.querySelector('.menu')
+    menu.addEventListener('click', (e) => {
+        if (e.target.className === 'menu-item') {
+            console.log(e.target.id)
+        }
     })
-
-    let falafel = document.getElementById('falafel')
-    falafel.addEventListener('click', () => {
-        console.log('Falafel')
-    })
-
-    let hookah = document.getElementById('hookah')
-    hookah.addEventListener('click', () => {
-        console.log('Hookah')
-    })
-
-    let lamb = document.getElementById('lamb')
-    lamb.addEventListener('click', () => {
-        console.log('Lamb')
-    })
-}
+}   
 
 

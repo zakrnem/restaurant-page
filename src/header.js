@@ -1,5 +1,5 @@
-import { menuBody } from './menu.js'
-import { plateListener } from './menu.js';
+import { menuDOM } from './menu.js'
+/* import { plateListener } from './menu.js'; */
 import {homeBody} from './home.js'
 import {orderListener} from './home.js'
 import { clearDOM } from './clearDOM.js';
@@ -55,7 +55,7 @@ export function headerListener() {
     let menu = document.getElementById('menu')
     menu.addEventListener('click', () => {
         clearDOM()
-        menuBody()
+        menuDOM()
         /* plateListener() */
     })
 

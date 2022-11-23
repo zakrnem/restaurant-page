@@ -1,4 +1,4 @@
-import { menuBody } from './menu.js'
+import { menuDOM } from './menu.js'
 import { clearDOM } from './clearDOM.js'
 import { footer } from './footer.js'
 
@@ -65,6 +65,6 @@ export function orderListener() {
     let order = document.querySelector('#order')
     order.addEventListener('click', () => {
         clearDOM()
-        menuBody()
+        menuDOM()
     })
 }
