@@ -3,7 +3,7 @@ import { plateListener } from './menu.js';
 import {homeBody} from './home.js'
 import {orderListener} from './home.js'
 import { clearDOM } from './clearDOM.js';
-import { newPlate } from './menu.js';
+
 
 export function head() {
     let header = document.createElement('header')
