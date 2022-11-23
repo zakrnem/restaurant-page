@@ -1,7 +1,7 @@
 import { footer } from './footer.js';
 
 function newPlate(imgSrc, name, price) {
-    let item = document.createElement('div')
+    let item = document.createElement('a')
     item.className = 'menu-item'
     item.id = name.toLowerCase().replace(/\s+/g, '')
         let plateImage = document.createElement('img')
@@ -50,10 +50,10 @@ export function menuDOM() {
 function plateListener() {
     let menu = document.querySelector('.menu')
     menu.addEventListener('click', (e) => {
-        if (e.target.className === 'menu-item') {
-            console.log(e.target.id)
+        if (e.target.className === 'menu-item'
+        || e.target.parentNode.className === 'menu-item') {
+            console.log(e.target.id ? e.target.id : e.target.parentNode.id)
         }
     })
-}   
-
+}
 
