@@ -2,92 +2,19 @@ import { footer } from './footer.js';
 
 export function menuBody() {
     let main = document.createElement('main')
-    
     let container = document.createElement('div')
     container.className = 'menu'
+    
+    let item1 = newPlate('falafel-svgrepo-com.svg','Falafel', '3.21$')
+    let item2 = newPlate('hookah-svgrepo-com.svg','Hookah','1.82$')
+    let item3 = newPlate('lamb-svgrepo-com.svg','Lamb', '4.50$')
+    let item4 = newPlate('burrito-svgrepo-com.svg','Shawarma','5.15$')
 
-    let item1 = document.createElement('div')
-    item1.className = 'menu-item'
-    item1.id = 'shawarma'
     container.appendChild(item1)
-
-        let plateImage1 = document.createElement('img')
-        plateImage1.className = 'plate-image'
-        plateImage1.src = './images/burrito-svgrepo-com.svg'
-        item1.appendChild(plateImage1)
-
-        let plateName1 = document.createElement('div')
-        plateName1.className = 'plate-name'
-        plateName1.textContent = 'Shawarma'
-        item1.appendChild(plateName1)
-
-        let platePrice1 = document.createElement('div')
-        platePrice1.className = 'plate-price'
-        platePrice1.textContent = 'Price: 5.15$'
-        item1.appendChild(platePrice1)
-
-    let item2 = document.createElement('div')
-    item2.className = 'menu-item'
-    item2.id = 'falafel'
     container.appendChild(item2)
-
-        let plateImage2 = document.createElement('img')
-        plateImage2.className = 'plate-image'
-        plateImage2.src = './images/falafel-svgrepo-com.svg'
-        item2.appendChild(plateImage2)
-
-        let plateName2 = document.createElement('div')
-        plateName2.className = 'plate-name'
-        plateName2.textContent = 'Falafel'
-        item2.appendChild(plateName2)
-
-        let platePrice2 = document.createElement('div')
-        platePrice2.className = 'plate-price'
-        platePrice2.textContent = 'Price: 3.21$ '
-        item2.appendChild(platePrice2)
-        
-        let item3 = document.createElement('div')
-        item3.className = 'menu-item'
-        item3.id = 'hookah'
-        container.appendChild(item3)
-    
-            let plateImage3 = document.createElement('img')
-            plateImage3.className = 'plate-image'
-            plateImage3.src = './images/hookah-svgrepo-com.svg'
-            item3.appendChild(plateImage3)
-    
-            let plateName3 = document.createElement('div')
-            plateName3.className = 'plate-name'
-            plateName3.textContent = 'Hookah'
-            item3.appendChild(plateName3)
-    
-            let platePrice3 = document.createElement('div')
-            platePrice3.className = 'plate-price'
-            platePrice3.textContent = 'Price: 1.82$ '
-            item3.appendChild(platePrice3)
-
-        let item4 = document.createElement('div')
-        item4.className = 'menu-item'
-        item4.id = 'lamb'
-        container.appendChild(item4)
-    
-            let plateImage4 = document.createElement('img')
-            plateImage4.className = 'plate-image'
-            plateImage4.src = './images/lamb-svgrepo-com.svg'
-            item4.appendChild(plateImage4)
-    
-            let plateName4 = document.createElement('div')
-            plateName4.className = 'plate-name'
-            plateName4.textContent = 'Lamb'
-            item4.appendChild(plateName4)
-    
-            let platePrice4 = document.createElement('div')
-            platePrice4.className = 'plate-price'
-            platePrice4.textContent = 'Price: 4.50$ '
-            item4.appendChild(platePrice4)
-
+    container.appendChild(item3)
+    container.appendChild(item4)
     main.appendChild(container)
-    let content = document.querySelector('#content')
     content.appendChild(main)
     footer()
 }
@@ -115,15 +42,13 @@ export function plateListener() {
 }
 
 export function newPlate(imgSrc, name, price) {
-
     let main = document.querySelector('main')
     let container = document.querySelector('.menu')
     let content = document.querySelector('#content')
 
     let item = document.createElement('div')
     item.className = 'menu-item'
-    item.id = name
-    container.appendChild(item)
+    item.id = name.toLowerCase().replace(/\s+/g, '')
         let plateImage = document.createElement('img')
         plateImage.className = 'plate-image'
         plateImage.src = `./images/${imgSrc}`
@@ -139,7 +64,5 @@ export function newPlate(imgSrc, name, price) {
         platePrice.textContent = `Price: ${price}`
         item.appendChild(platePrice)
     
-    main.appendChild(container)
-    content.appendChild(main)
-
+    return item
 }

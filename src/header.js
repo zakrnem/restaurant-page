@@ -56,8 +56,7 @@ export function headerListener() {
     menu.addEventListener('click', () => {
         clearDOM()
         menuBody()
-        plateListener()
-        newPlate('hookah-svgrepo-com.svg','arabe','1$')
+        /* plateListener() */
     })
 
     let contact = document.getElementById('contact')
