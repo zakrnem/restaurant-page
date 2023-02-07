@@ -7,6 +7,7 @@ homeBody()
 import { menuDOM } from './menu.js'
 import { clearDOM } from './clearDOM.js';
 
+import { contactDOM } from './contact.js'
 
 function head() {
     let header = document.createElement('header')
@@ -62,7 +63,8 @@ function headerListener() {
 
     let contact = document.getElementById('contact')
     contact.addEventListener('click', () => {
-        console.log('Contact')
+        clearDOM()
+        contactDOM()
     })
 
     let main = document.querySelector('.main')
