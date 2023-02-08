@@ -41,7 +41,14 @@ export function contactDOM() {
 
 function mapHTML() {
     let mapEmbed = document.createElement('div')
-    mapEmbed.innerHTML = 
-    '<div class="gmap_canvas"><iframe width="350" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=1%20Galle%20Face%20Shangri-La%20Hotel,%20Colombo%2000200%20Sri%20Lanka&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>'
+    mapEmbed.className = 'gmap_canvas'
+
+    let mapCanvas = document.createElement('iframe')
+    mapCanvas.width = 350
+    mapCanvas.height = 250
+    mapCanvas.id = 'gmap_canvas'
+    mapCanvas.src = "https://maps.google.com/maps?q=1%20Galle%20Face%20Shangri-La%20Hotel,%20Colombo%2000200%20Sri%20Lanka&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    mapEmbed.appendChild(mapCanvas)
+
     return mapEmbed
 }
