@@ -1,4 +1,6 @@
 import { footer } from './footer.js';
+import { clearDOM } from './clearDOM.js';
+import { contactDOM } from './contact.js';
 
 function newPlate(imgSrc, name, price) {
     let item = document.createElement('a')
@@ -53,6 +55,8 @@ function plateListener() {
         if (e.target.className === 'menu-item'
         || e.target.parentNode.className === 'menu-item') {
             console.log(e.target.id ? e.target.id : e.target.parentNode.id)
+            clearDOM()
+            contactDOM()
             //return in the future
         }
     })
