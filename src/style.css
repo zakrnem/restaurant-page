@@ -184,3 +184,11 @@ footer {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
 }
+
+.map-title,
+.contact-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}

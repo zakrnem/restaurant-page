@@ -7,6 +7,11 @@ export function contactDOM() {
     let contactInfo = document.createElement('div')
     contactInfo.className = 'info'
         
+        let contactTitle = document.createElement('div')
+        contactTitle.className = 'contact-title'
+        contactTitle.textContent = 'Contact us:'
+        contactInfo.appendChild(contactTitle)
+
         let phone = document.createElement('div')
         phone.className = 'phone'
         contactInfo.appendChild(phone)
@@ -42,6 +47,11 @@ export function contactDOM() {
 function mapHTML() {
     let mapEmbed = document.createElement('div')
     mapEmbed.className = 'gmap_canvas'
+
+    let mapTitle = document.createElement('div')
+    mapTitle.className = 'map-title'
+    mapTitle.textContent = 'Our location:'
+    mapEmbed.appendChild(mapTitle)
 
     let mapCanvas = document.createElement('iframe')
     mapCanvas.width = 350
