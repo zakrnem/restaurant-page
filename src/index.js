@@ -1,3 +1,4 @@
+import '../node_modules/footer-zkrnem/styles.css'
 import './style.css';
 head()
 

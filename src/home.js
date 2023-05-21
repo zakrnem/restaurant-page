@@ -1,6 +1,6 @@
 import { menuDOM } from './menu.js'
 import { clearDOM } from './clearDOM.js'
-import { footer } from './footer.js'
+import { footer } from 'footer-zkrnem'
 
 export function homeBody() {
     let main = document.createElement('main')
